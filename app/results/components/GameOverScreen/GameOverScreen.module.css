@@ -26,6 +26,14 @@
   gap: 32px;
 }
 
+.subtitle {
+  font-weight: 600;
+  font-size: 32px;
+  margin-bottom: 8px;
+  opacity: 0.5;
+  color: #1c1c21;
+}
+
 .title {
   font-weight: 600;
   font-size: 56px;
