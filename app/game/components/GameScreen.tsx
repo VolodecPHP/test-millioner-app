@@ -4,6 +4,7 @@ export const GameScreen = () => {
   const classNames = {
     block: styles['block'],
     round: styles['round'],
+    roundContainer: styles['round-container'],
     sidebar: styles['sidebar'],
     options: styles['options'],
     title: styles['title'],
@@ -19,33 +20,35 @@ export const GameScreen = () => {
   return (
     <div className={classNames.block}>
       <div className={classNames.round}>
-        <p className={classNames.title}>
-          How old your elder brother was 10 years before you was born, mate?
-        </p>
-        <div className={classNames.options}>
-          <div className={classNames.option}>
-            <button className={classNames.optionContent}>
-              <span className={classNames.optionId}>A</span>
-              <span className={classNames.optionText}>10 years</span>
-            </button>
-          </div>
-          <div className={classNames.option}>
-            <button className={classNames.optionContent}>
-              <span className={classNames.optionId}>B</span>
-              <span className={classNames.optionText}>20 years</span>
-            </button>
-          </div>
-          <div className={classNames.option}>
-            <button className={classNames.optionContent}>
-              <span className={classNames.optionId}>C</span>
-              <span className={classNames.optionText}>30 years</span>
-            </button>
-          </div>
-          <div className={classNames.option}>
-            <button className={classNames.optionContent}>
-              <span className={classNames.optionId}>D</span>
-              <span className={classNames.optionText}>40 years</span>
-            </button>
+        <div className={classNames.roundContainer}>
+          <p className={classNames.title}>
+            How old your elder brother was 10 years before you was born, mate?
+          </p>
+          <div className={classNames.options}>
+            <div className={classNames.option}>
+              <button className={classNames.optionContent}>
+                <span className={classNames.optionId}>A</span>
+                <span className={classNames.optionText}>10 years</span>
+              </button>
+            </div>
+            <div className={classNames.option}>
+              <button className={classNames.optionContent}>
+                <span className={classNames.optionId}>B</span>
+                <span className={classNames.optionText}>20 years</span>
+              </button>
+            </div>
+            <div className={classNames.option}>
+              <button className={classNames.optionContent}>
+                <span className={classNames.optionId}>C</span>
+                <span className={classNames.optionText}>30 years</span>
+              </button>
+            </div>
+            <div className={classNames.option}>
+              <button className={classNames.optionContent}>
+                <span className={classNames.optionId}>D</span>
+                <span className={classNames.optionText}>40 years</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
