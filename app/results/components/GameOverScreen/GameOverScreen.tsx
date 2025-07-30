@@ -5,7 +5,11 @@ import Link from 'next/link';
 // TODO: add different src for different screen sizes
 // TODO: pass title, button text, image, url, score as props
 // TODO: fix styles, add adaptive styles
-export const GameOverScreen = () => {
+interface GameOverScreenProps {
+  prize: number;
+}
+
+export const GameOverScreen = ({ prize }: GameOverScreenProps) => {
   const classNames = {
     block: styles['block'],
     content: styles['content'],
@@ -20,7 +24,7 @@ export const GameOverScreen = () => {
         <Image src='/start-desktop-v1.png' width={624} height={367} alt='' />
         <div>
           <p className={classNames.subtitle}>Total score:</p>
-          <h1 className={classNames.title}>$8,000 earned</h1>
+          <h1 className={classNames.title}>${prize} earned</h1>
           <Link href='/game' className={classNames.link}>
             Try again
           </Link>
