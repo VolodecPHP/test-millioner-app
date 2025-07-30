@@ -1,0 +1,193 @@
+{
+	"questions": [
+		{
+			"id": "q-1",
+			"text": "What is the capital of France?",
+			"prize": 100,
+			"options": [
+				{
+					"id": "q1-o1",
+					"text": "Berlin",
+					"isCorrect": false
+				},
+				{
+					"id": "q1-o2",
+					"text": "Madrid",
+					"isCorrect": false
+				},
+				{
+					"id": "q1-o3",
+					"text": "Paris",
+					"isCorrect": true
+				},
+				{
+					"id": "q1-o4",
+					"text": "Rome",
+					"isCorrect": false
+				}
+			]
+		},
+		{
+			"id": "q-2",
+			"text": "What is the largest planet in our solar system?",
+			"prize": 200,
+			"options": [
+				{
+					"id": "q2-o1",
+					"text": "Earth",
+					"isCorrect": false
+				},
+				{
+					"id": "q2-o2",
+					"text": "Jupiter",
+					"isCorrect": true
+				},
+				{
+					"id": "q2-o3",
+					"text": "Mars",
+					"isCorrect": false
+				},
+				{
+					"id": "q2-o4",
+					"text": "Saturn",
+					"isCorrect": false
+				}
+			]
+		},
+		{
+			"id": "q-3",
+			"text": "What is the chemical symbol for water?",
+			"prize": 300,
+			"options": [
+				{
+					"id": "q3-o1",
+					"text": "H2O",
+					"isCorrect": true
+				},
+				{
+					"id": "q3-o2",
+					"text": "CO2",
+					"isCorrect": false
+				},
+				{
+					"id": "q3-o3",
+					"text": "O2",
+					"isCorrect": false
+				},
+				{
+					"id": "q3-o4",
+					"text": "NaCl",
+					"isCorrect": false
+				}
+			]
+		},
+		{
+			"id": "q-4",
+			"text": "Who wrote 'To Kill a Mockingbird'?",
+			"prize": 500,
+			"options": [
+				{
+					"id": "q4-o1",
+					"text": "Harper Lee",
+					"isCorrect": true
+				},
+				{
+					"id": "q4-o2",
+					"text": "Mark Twain",
+					"isCorrect": false
+				},
+				{
+					"id": "q4-o3",
+					"text": "Ernest Hemingway",
+					"isCorrect": false
+				},
+				{
+					"id": "q4-o4",
+					"text": "F. Scott Fitzgerald",
+					"isCorrect": false
+				}
+			]
+		},
+		{
+			"id": "q-5",
+			"text": "What is the powerhouse of the cell?",
+			"prize": 1000,
+			"options": [
+				{
+					"id": "q5-o1",
+					"text": "Nucleus",
+					"isCorrect": false
+				},
+				{
+					"id": "q5-o2",
+					"text": "Mitochondria",
+					"isCorrect": true
+				},
+				{
+					"id": "q5-o3",
+					"text": "Ribosome",
+					"isCorrect": false
+				},
+				{
+					"id": "q5-o4",
+					"text": "Endoplasmic Reticulum",
+					"isCorrect": false
+				}
+			]
+		},
+		{
+			"id": "q-6",
+			"text": "Which of the following are programming languages?",
+			"prize": 2000,
+			"options": [
+				{
+					"id": "q6-o1",
+					"text": "Python",
+					"isCorrect": true
+				},
+				{
+					"id": "q6-o2",
+					"text": "HTML",
+					"isCorrect": false
+				},
+				{
+					"id": "q6-o3",
+					"text": "JavaScript",
+					"isCorrect": true
+				},
+				{
+					"id": "q6-o4",
+					"text": "CSS",
+					"isCorrect": false
+				}
+			]
+		},
+		{
+			"id": "q-7",
+			"text": "What is the capital of Japan?",
+			"prize": 4000,
+			"options": [
+				{
+					"id": "q7-o1",
+					"text": "Seoul",
+					"isCorrect": false
+				},
+				{
+					"id": "q7-o2",
+					"text": "Tokyo",
+					"isCorrect": true
+				},
+				{
+					"id": "q7-o3",
+					"text": "Beijing",
+					"isCorrect": false
+				},
+				{
+					"id": "q7-o4",
+					"text": "Bangkok",
+					"isCorrect": false
+				}
+			]
+		}
+	]
+}
