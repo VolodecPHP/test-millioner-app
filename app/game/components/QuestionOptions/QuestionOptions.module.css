@@ -1,0 +1,102 @@
+.options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 32px;
+}
+
+.option {
+  padding: 0 16px;
+}
+
+.option-content {
+  padding: 8px 32px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 8px;
+  aspect-ratio: 288 / 56;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  width: 100%;
+
+  &::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 16px;
+    background-color: #d0d0d8;
+    position: absolute;
+    top: 50%;
+    right: 100%;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 16px;
+    background-color: #d0d0d8;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+  }
+}
+
+.option-content--selected {
+  &::before,
+  &::after {
+    background-color: #ff8b37;
+  }
+}
+
+.option-content--correct {
+  &::before,
+  &::after {
+    background-color: #47d867;
+  }
+}
+
+.option-content--incorrect {
+  &::before,
+  &::after {
+    background-color: #ec6259;
+  }
+}
+
+.option-id {
+  color: #ff8b37;
+  font-weight: 600;
+  font-size: 20px;
+  position: relative;
+}
+
+.option-text {
+  font-weight: 400;
+  font-size: 20px;
+  color: #1c1c21;
+  position: relative;
+}
+
+.icon-wrapper {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.icon-path--selected {
+  fill: #fff3eb;
+  stroke: #ff8b37;
+}
+
+.icon-path--correct {
+  fill: #e6faea;
+  stroke: #47d867;
+}
+
+.icon-path--incorrect {
+  fill: #fdeeed;
+  stroke: #ec6259;
+}
