@@ -2,6 +2,12 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 32px;
+
+  @media (max-width: 768px) {
+    padding: 16px 0 24px;
+    row-gap: 8px;
+    grid-template-columns: 1fr;
+  }
 }
 
 .option {
@@ -21,61 +27,67 @@
   background-color: transparent;
   width: 100%;
 
+  @media (max-width: 768px) {
+    max-height: 60px;
+  }
+
   &::before {
     content: '';
     position: absolute;
     height: 1px;
-    width: 16px;
-    background-color: #d0d0d8;
+    width: 17px;
+    background-color: var(--color-black-40);
     position: absolute;
     top: 50%;
-    right: 100%;
+    right: calc(100% - 1px);
+    transform: translateY(-50%);
   }
 
   &::after {
     content: '';
     position: absolute;
     height: 1px;
-    width: 16px;
-    background-color: #d0d0d8;
+    width: 17px;
+    background-color: var(--color-black-40);
     position: absolute;
     top: 50%;
-    left: 100%;
+    left: calc(100% - 1px);
+    transform: translateY(-50%);
   }
 }
 
 .option-content--selected {
   &::before,
   &::after {
-    background-color: #ff8b37;
+    background-color: var(--color-orange-100);
   }
 }
 
 .option-content--correct {
   &::before,
   &::after {
-    background-color: #47d867;
+    background-color: var(--color-green-100);
   }
 }
 
 .option-content--incorrect {
   &::before,
   &::after {
-    background-color: #ec6259;
+    background-color: var(--color-red-100);
   }
 }
 
 .option-id {
-  color: #ff8b37;
+  color: var(--color-orange-100);
   font-weight: 600;
-  font-size: 20px;
+  font-size: var(--text-size-option);
   position: relative;
 }
 
 .option-text {
   font-weight: 400;
-  font-size: 20px;
-  color: #1c1c21;
+  font-size: var(--text-size-option);
+  color: var(--color-black-100);
   position: relative;
 }
 
@@ -87,16 +99,16 @@
 }
 
 .icon-path--selected {
-  fill: #fff3eb;
-  stroke: #ff8b37;
+  fill: var(--color-orange-5);
+  stroke: var(--color-orange-100);
 }
 
 .icon-path--correct {
-  fill: #e6faea;
-  stroke: #47d867;
+  fill: var(--color-green-5);
+  stroke: var(--color-green-100);
 }
 
 .icon-path--incorrect {
-  fill: #fdeeed;
-  stroke: #ec6259;
+  fill: var(--color-red-5);
+  stroke: var(--color-red-100);
 }

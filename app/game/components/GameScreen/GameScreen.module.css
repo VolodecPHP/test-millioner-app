@@ -1,14 +1,28 @@
 .block {
   display: grid;
   grid-template-columns: auto 376px;
-  background-color: #f5f5f7;
+  background-color: var(--color-black-5);
   min-height: 100vh;
+
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: calc(16px + 24px + 16px) auto;
+  }
 }
 
 .round {
   padding: 80px;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 992px) {
+    padding: 24px;
+    gap: 24px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0;
+  }
 }
 
 .round-container {
@@ -19,29 +33,106 @@
   gap: 16px;
   width: 100%;
   max-width: 846px;
+
+  @media (max-width: 992px) {
+    max-width: unset;
+    gap: 0;
+  }
 }
 
 .title {
   flex-grow: 1;
   font-weight: 600;
-  font-size: 32px;
-  color: #1c1c21;
+  font-size: var(--text-size-question);
+  color: var(--color-black-100);
   max-width: 624px;
   width: 100%;
+
+  @media (max-width: 992px) {
+    max-width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 16px;
+  }
 }
 
 .sidebar {
-  background-color: #fff;
+  background-color: var(--color-white-100);
   padding: 24px 0;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
+  @media (max-width: 992px) {
+    display: none;
+  }
+}
+
+.sidebar-content {
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  gap: 8px;
+  display: flex;
+  flex-direction: column-reverse;
+  overflow-x: hidden;
+}
+
+.burger-button {
+  display: none;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+
+  @media (max-width: 992px) {
+    display: block;
+  }
+}
+
+.mobile-header {
+  display: none;
+  padding: 16px;
+
+  @media (max-width: 992px) {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  width: 100%;
+  height: calc(100% - calc(16px + 24px + 16px));
+  left: 0;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+  top: calc(16px + 24px + 16px);
+  background-color: var(--color-black-5);
+  z-index: -1;
+  opacity: 0;
+  pointer-events: none;
+
+  padding: 10px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.sidebar-content {
-  max-height: calc(100vh - 48px);
+.mobile-menu--open {
+  z-index: 1000;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-menu-content {
+  max-height: calc(100% - 20px);
   overflow-y: auto;
   gap: 8px;
   display: flex;

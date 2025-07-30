@@ -1,0 +1,29 @@
+.link {
+  font-weight: 600;
+  font-size: var(--text-size-button);
+  background-color: var(--color-orange-100);
+  border-radius: 12px;
+  cursor: pointer;
+  color: var(--color-white-100);
+  min-width: 248px;
+  max-width: 100%;
+  padding: 20px 24px;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  width: auto;
+  align-self: flex-start;
+  transition: background-color var(--transition-1);
+
+  @media (max-width: 992px) {
+    padding: 16px 24px;
+  }
+
+  &:hover {
+    background-color: var(--color-orange-80);
+  }
+
+  &:active {
+    background-color: var(--color-orange-120);
+  }
+}
