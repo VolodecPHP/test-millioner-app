@@ -1,11 +1,11 @@
-'use client';
-
-import { useSearchParams } from 'next/navigation';
 import { GameOverScreen } from './components/GameOverScreen/GameOverScreen';
+import { Suspense } from 'react';
+import { ResultsContent } from './content';
 
 export default function Results() {
-  const searchParams = useSearchParams();
-  const score = searchParams.get('totalPrize') || '0';
-
-  return <GameOverScreen prize={Number(score)} />;
+  return (
+    <Suspense fallback={<GameOverScreen prize={0} />}>
+      <ResultsContent />
+    </Suspense>
+  );
 }
