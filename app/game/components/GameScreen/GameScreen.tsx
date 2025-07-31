@@ -3,6 +3,7 @@ import { QuestionList } from '../QuestionList/QuestionList';
 import { QuestionOptions } from '../QuestionOptions/QuestionOptions';
 import { Question } from '@/types';
 import { useState } from 'react';
+import { MobileHeader } from '../MobileHeader/MobileHeader';
 import cn from 'classnames';
 
 interface GameScreenProps {
@@ -29,40 +30,19 @@ export const GameScreen = ({
     sidebar: styles['sidebar'],
     title: styles['title'],
     sidebarContent: styles['sidebar-content'],
-    burgerButton: cn(styles['burger-button'], {
-      [styles['burger-button--open']]: isMobileMenuOpen,
-    }),
-    mobileHeader: styles['mobile-header'],
     mobileMenu: cn(styles['mobile-menu'], {
       [styles['mobile-menu--open']]: isMobileMenuOpen,
       [styles['mobile-menu--closed']]: !isMobileMenuOpen,
     }),
     mobileMenuContent: styles['mobile-menu-content'],
-    burgerLineTop: styles['burger-line-top'],
-    burgerLineMiddle: styles['burger-line-middle'],
-    burgerLineBottom: styles['burger-line-bottom'],
   };
 
   return (
     <div className={classNames.block}>
-      <div className={classNames.mobileHeader}>
-        <button
-          className={classNames.burgerButton}
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          <div className={classNames.burgerLineTop}></div>
-          <div className={classNames.burgerLineMiddle}></div>
-          <div className={classNames.burgerLineBottom}></div>
-        </button>
-      </div>
-      <div className={classNames.mobileMenu}>
-        <div className={classNames.mobileMenuContent}>
-          <QuestionList
-            questions={questions}
-            currentQuestion={currentQuestion}
-          />
-        </div>
-      </div>
+      <MobileHeader
+        isMobileMenuOpen={isMobileMenuOpen}
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+      />
       <div className={classNames.round}>
         <div className={classNames.roundContainer}>
           <p className={classNames.title}>{currentQuestion.text}</p>
@@ -76,6 +56,14 @@ export const GameScreen = ({
       </div>
       <div className={classNames.sidebar}>
         <div className={classNames.sidebarContent}>
+          <QuestionList
+            questions={questions}
+            currentQuestion={currentQuestion}
+          />
+        </div>
+      </div>
+      <div className={classNames.mobileMenu}>
+        <div className={classNames.mobileMenuContent}>
           <QuestionList
             questions={questions}
             currentQuestion={currentQuestion}
