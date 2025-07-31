@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description:
     'Test your knowledge at free online game based on the famous TV quiz show , give the correct answers, and win some amazing prizes!',
   openGraph: {
-    title: 'I ❤️ Headway',
+    title: 'I love Headway',
     description: 'Nothing else to add',
     images: [
       {
