@@ -7,33 +7,37 @@ import { getQuestionLetter } from '@/utils/get-question-letter';
 
 interface QuestionOptionProps {
   currentQuestion: Question;
-  gamePaused: boolean;
-  revealAnswers: boolean;
+  isGamePaused: boolean;
+  isAnswersRevealed: boolean;
   submitAnswer: (questionId: string, optionId: string) => void;
 }
 
 export const QuestionOptions = ({
   currentQuestion,
-  gamePaused,
-  revealAnswers,
+  isGamePaused,
+  isAnswersRevealed,
   submitAnswer,
 }: QuestionOptionProps) => {
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
 
   const getButtonState = (option: Option) => {
-    if (!gamePaused && !revealAnswers) {
+    if (!isGamePaused && !isAnswersRevealed) {
       return 'default';
     }
 
-    if (revealAnswers && selectedOptionId === option.id && !option.isCorrect) {
+    if (
+      isAnswersRevealed &&
+      selectedOptionId === option.id &&
+      !option.isCorrect
+    ) {
       return 'incorrect';
     }
 
-    if (revealAnswers && option.isCorrect) {
+    if (isAnswersRevealed && option.isCorrect) {
       return 'correct';
     }
 
-    if (gamePaused && selectedOptionId === option.id) {
+    if (isGamePaused && selectedOptionId === option.id) {
       return 'selected';
     }
   };
@@ -60,7 +64,7 @@ export const QuestionOptions = ({
           <div className={classNames.option} key={option.id}>
             <button
               className={classNames.optionContent(option)}
-              disabled={revealAnswers || gamePaused}
+              disabled={isAnswersRevealed || isGamePaused}
               onClick={() => {
                 setSelectedOptionId(option.id);
 

@@ -19,10 +19,9 @@ export interface GameState {
   currentQuestion: Question;
   isGameOver: boolean;
   questions: Question[];
-  userAnswers: Record<string, string>;
-  revealAnswers: boolean;
-  gamePaused: boolean;
-  totalPrize: number;
+  isAnswersRevealed: boolean;
+  isGamePaused: boolean;
+  score: number;
   submitAnswer: (questionId: string, optionId: string) => void;
   resetGame: () => void;
 }

@@ -8,16 +8,16 @@ import cn from 'classnames';
 interface GameScreenProps {
   questions: Question[];
   currentQuestion: Question;
-  revealAnswers: boolean;
-  gamePaused: boolean;
+  isAnswersRevealed: boolean;
+  isGamePaused: boolean;
   submitAnswer: (questionId: string, optionId: string) => void;
 }
 
 export const GameScreen = ({
   questions,
   currentQuestion,
-  revealAnswers,
-  gamePaused,
+  isAnswersRevealed,
+  isGamePaused,
   submitAnswer,
 }: GameScreenProps) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -68,8 +68,8 @@ export const GameScreen = ({
           <p className={classNames.title}>{currentQuestion.text}</p>
           <QuestionOptions
             currentQuestion={currentQuestion}
-            revealAnswers={revealAnswers}
-            gamePaused={gamePaused}
+            isAnswersRevealed={isAnswersRevealed}
+            isGamePaused={isGamePaused}
             submitAnswer={submitAnswer}
           />
         </div>

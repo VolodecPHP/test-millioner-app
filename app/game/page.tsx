@@ -1,14 +1,14 @@
 'use client';
 
-import { useGame } from '@/context/GameProvider';
 import { GameScreen } from './components/GameScreen/GameScreen';
+import { useGame } from './GameProvider';
 
 export default function Game() {
   const {
     questions,
     currentQuestion,
-    revealAnswers,
-    gamePaused,
+    isAnswersRevealed,
+    isGamePaused,
     submitAnswer,
   } = useGame();
 
@@ -16,8 +16,8 @@ export default function Game() {
     <GameScreen
       questions={questions}
       currentQuestion={currentQuestion}
-      revealAnswers={revealAnswers}
-      gamePaused={gamePaused}
+      isAnswersRevealed={isAnswersRevealed}
+      isGamePaused={isGamePaused}
       submitAnswer={submitAnswer}
     />
   );

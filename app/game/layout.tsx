@@ -1,5 +1,5 @@
 import { getGameConfig } from '@/config';
-import { GameProvider } from '@/context/GameProvider';
+import { GameProvider } from './GameProvider';
 
 export default function GameLayout({
   children,
@@ -7,7 +7,13 @@ export default function GameLayout({
   children: React.ReactNode;
 }) {
   return (
-    <GameProvider questions={getGameConfig().questions}>
+    <GameProvider
+      questions={getGameConfig().questions}
+      __injections={{
+        revealAnswersTimeout: 1000,
+        nextQuestionTimeout: 2000,
+      }}
+    >
       {children}
     </GameProvider>
   );

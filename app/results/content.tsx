@@ -1,10 +1,10 @@
 'use client';
 
 import { GameOverScreen } from './components/GameOverScreen/GameOverScreen';
-import { useGetTotalPrize } from './hooks/use-get-total-prize';
+import { useGetScore } from './hooks/use-get-score';
 
 export const ResultsContent = () => {
-  const { totalPrize } = useGetTotalPrize();
+  const { score } = useGetScore();
 
-  return <GameOverScreen prize={totalPrize} />;
+  return <GameOverScreen prize={score} />;
 };
