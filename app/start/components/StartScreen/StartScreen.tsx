@@ -2,9 +2,6 @@ import Image from 'next/image';
 import { Link } from '@/components/Link/Link';
 import styles from './StartScreen.module.css';
 
-// TODO: add different src for different screen sizes
-// TODO: pass title, button text, image, url as props
-// TODO: fix styles, add adaptive styles
 export const StartScreen = () => {
   const classNames = {
     block: styles['block'],

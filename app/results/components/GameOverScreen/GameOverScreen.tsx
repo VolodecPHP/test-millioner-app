@@ -2,9 +2,6 @@ import Image from 'next/image';
 import { Link } from '@/components/Link/Link';
 import styles from './GameOverScreen.module.css';
 
-// TODO: add different src for different screen sizes
-// TODO: pass title, button text, image, url, score as props
-// TODO: fix styles, add adaptive styles
 interface GameOverScreenProps {
   prize: number;
 }
