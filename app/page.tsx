@@ -1,3 +1,5 @@
+import { StartScreen } from './start/components/StartScreen/StartScreen';
+
 export default function Default() {
-  return <div>Default</div>;
+  return <StartScreen />;
 }
