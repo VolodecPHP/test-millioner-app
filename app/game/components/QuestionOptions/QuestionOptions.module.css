@@ -1,17 +1,26 @@
 .options {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
   row-gap: 32px;
+
+  @media (max-width: 1200px) {
+    row-gap: 16px;
+  }
 
   @media (max-width: 768px) {
     padding: 16px 0 24px;
     row-gap: 8px;
-    grid-template-columns: 1fr;
   }
 }
 
 .option {
   padding: 0 16px;
+  display: flex;
+  width: 50%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 }
 
 .option-content {
@@ -101,6 +110,7 @@
   font-size: var(--text-size-option);
   color: var(--color-black-100);
   position: relative;
+  text-align: left;
 }
 
 .icon-wrapper {

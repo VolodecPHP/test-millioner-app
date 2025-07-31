@@ -16,7 +16,7 @@
     content: '';
     position: absolute;
     height: 1px;
-    width: 100%;
+    width: 100vw;
     background-color: #d0d0d8;
     position: absolute;
     top: 50%;
@@ -28,7 +28,7 @@
     content: '';
     position: absolute;
     height: 1px;
-    width: 100%;
+    width: 100vw;
     background-color: #d0d0d8;
     position: absolute;
     top: 50%;
