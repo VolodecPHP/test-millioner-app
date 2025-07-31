@@ -188,6 +188,141 @@
 					"isCorrect": false
 				}
 			]
+		},
+		{
+			"id": "q-8",
+			"text": "What is the largest mammal?",
+			"prize": 8000,
+			"options": [
+				{
+					"id": "q8-o1",
+					"text": "Elephant",
+					"isCorrect": false
+				},
+				{
+					"id": "q8-o2",
+					"text": "Blue Whale",
+					"isCorrect": true
+				},
+				{
+					"id": "q8-o3",
+					"text": "Giraffe",
+					"isCorrect": false
+				},
+				{
+					"id": "q8-o4",
+					"text": "Hippopotamus",
+					"isCorrect": false
+				}
+			]
+		},
+		{
+			"id": "q-9",
+			"text": "What is the main ingredient in guacamole?",
+			"prize": 16000,
+			"options": [
+				{
+					"id": "q9-o1",
+					"text": "Tomato",
+					"isCorrect": false
+				},
+				{
+					"id": "q9-o2",
+					"text": "Avocado",
+					"isCorrect": true
+				},
+				{
+					"id": "q9-o3",
+					"text": "Onion",
+					"isCorrect": false
+				},
+				{
+					"id": "q9-o4",
+					"text": "Pepper",
+					"isCorrect": false
+				}
+			]
+		},
+		{
+			"id": "q-10",
+			"text": "What is the hardest natural substance on Earth?",
+			"prize": 32000,
+			"options": [
+				{
+					"id": "q10-o1",
+					"text": "Gold",
+					"isCorrect": false
+				},
+				{
+					"id": "q10-o2",
+					"text": "Diamond",
+					"isCorrect": true
+				},
+				{
+					"id": "q10-o3",
+					"text": "Iron",
+					"isCorrect": false
+				},
+				{
+					"id": "q10-o4",
+					"text": "Quartz",
+					"isCorrect": false
+				}
+			]
+		},
+		{
+			"id": "q-11",
+			"text": "What is the main language spoken in Brazil?",
+			"prize": 64000,
+			"options": [
+				{
+					"id": "q11-o1",
+					"text": "Spanish",
+					"isCorrect": false
+				},
+				{
+					"id": "q11-o2",
+					"text": "Portuguese",
+					"isCorrect": true
+				},
+				{
+					"id": "q11-o3",
+					"text": "English",
+					"isCorrect": false
+				},
+				{
+					"id": "q11-o4",
+					"text": "French",
+					"isCorrect": false
+				}
+			]
+		},
+		{
+			"id": "q-12",
+			"text": "What is the largest continent by land area?",
+			"prize": 128000,
+			"options": [
+				{
+					"id": "q12-o1",
+					"text": "Africa",
+					"isCorrect": false
+				},
+				{
+					"id": "q12-o2",
+					"text": "Asia",
+					"isCorrect": true
+				},
+				{
+					"id": "q12-o3",
+					"text": "North America",
+					"isCorrect": false
+				},
+				{
+					"id": "q12-o4",
+					"text": "South America",
+					"isCorrect": false
+				}
+			]
 		}
 	]
 }

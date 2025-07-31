@@ -29,13 +29,18 @@ export const GameScreen = ({
     sidebar: styles['sidebar'],
     title: styles['title'],
     sidebarContent: styles['sidebar-content'],
-    burgerButton: styles['burger-button'],
+    burgerButton: cn(styles['burger-button'], {
+      [styles['burger-button--open']]: isMobileMenuOpen,
+    }),
     mobileHeader: styles['mobile-header'],
     mobileMenu: cn(styles['mobile-menu'], {
       [styles['mobile-menu--open']]: isMobileMenuOpen,
       [styles['mobile-menu--closed']]: !isMobileMenuOpen,
     }),
     mobileMenuContent: styles['mobile-menu-content'],
+    burgerLineTop: styles['burger-line-top'],
+    burgerLineMiddle: styles['burger-line-middle'],
+    burgerLineBottom: styles['burger-line-bottom'],
   };
 
   return (
@@ -45,7 +50,9 @@ export const GameScreen = ({
           className={classNames.burgerButton}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
-          ☰
+          <div className={classNames.burgerLineTop}></div>
+          <div className={classNames.burgerLineMiddle}></div>
+          <div className={classNames.burgerLineBottom}></div>
         </button>
       </div>
       <div className={classNames.mobileMenu}>
