@@ -6,5 +6,13 @@ import { useGetScore } from './hooks/use-get-score';
 export const ResultsContent = () => {
   const { score } = useGetScore();
 
-  return <GameOverScreen prize={score} />;
+  return (
+    <GameOverScreen
+      title={`$${score} earned`}
+      imageSrc='/start-desktop-v1.png'
+      linkHref='/game'
+      linkText='Try again'
+      subtitle='Total score:'
+    />
+  );
 };

@@ -3,10 +3,20 @@ import { Link } from '@/components/Link/Link';
 import styles from './GameOverScreen.module.css';
 
 interface GameOverScreenProps {
-  prize: number;
+  title: string;
+  imageSrc: string;
+  linkHref: string;
+  linkText: string;
+  subtitle: string;
 }
 
-export const GameOverScreen = ({ prize }: GameOverScreenProps) => {
+export const GameOverScreen = ({
+  title,
+  imageSrc,
+  linkHref,
+  linkText,
+  subtitle,
+}: GameOverScreenProps) => {
   const classNames = {
     block: styles['block'],
     content: styles['content'],
@@ -21,7 +31,7 @@ export const GameOverScreen = ({ prize }: GameOverScreenProps) => {
     <div className={classNames.block}>
       <div className={classNames.content}>
         <Image
-          src='/start-desktop-v1.png'
+          src={imageSrc}
           width={624}
           height={367}
           alt=''
@@ -29,10 +39,10 @@ export const GameOverScreen = ({ prize }: GameOverScreenProps) => {
           className={classNames.image}
         />
         <div className={classNames.rightBlock}>
-          <p className={classNames.subtitle}>Total score:</p>
-          <h1 className={classNames.title}>${prize} earned</h1>
-          <Link href='/game' className={classNames.link}>
-            Try again
+          <p className={classNames.subtitle}>{subtitle}</p>
+          <h1 className={classNames.title}>{title}</h1>
+          <Link href={linkHref} className={classNames.link}>
+            {linkText}
           </Link>
         </div>
       </div>

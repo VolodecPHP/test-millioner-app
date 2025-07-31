@@ -2,7 +2,19 @@ import Image from 'next/image';
 import { Link } from '@/components/Link/Link';
 import styles from './StartScreen.module.css';
 
-export const StartScreen = () => {
+interface StartScreenProps {
+  imageSrc: string;
+  title: string;
+  linkHref: string;
+  linkText: string;
+}
+
+export const StartScreen = ({
+  imageSrc,
+  title,
+  linkHref,
+  linkText,
+}: StartScreenProps) => {
   const classNames = {
     block: styles['block'],
     content: styles['content'],
@@ -16,7 +28,7 @@ export const StartScreen = () => {
     <div className={classNames.block}>
       <div className={classNames.content}>
         <Image
-          src='/start-desktop-v1.png'
+          src={imageSrc}
           width={624}
           height={367}
           alt=''
@@ -24,9 +36,9 @@ export const StartScreen = () => {
           className={classNames.image}
         />
         <div className={classNames.rightBlock}>
-          <h1 className={classNames.title}>Who wants to be a millionaire?</h1>
-          <Link href='/game' className={classNames.link}>
-            Start Game
+          <h1 className={classNames.title}>{title}</h1>
+          <Link href={linkHref} className={classNames.link}>
+            {linkText}
           </Link>
         </div>
       </div>
