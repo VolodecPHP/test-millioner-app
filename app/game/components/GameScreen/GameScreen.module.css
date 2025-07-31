@@ -99,7 +99,7 @@
   height: calc(100% - calc(16px + 24px + 16px));
   left: 0;
   overflow: hidden;
-  transition: all 0.2s ease-in-out;
+  transition: all var(--transition-2);
   top: calc(16px + 24px + 16px);
   background-color: var(--color-black-5);
   z-index: -1;
@@ -151,7 +151,7 @@
   height: 2px;
   background-color: var(--color-black-100);
   transform: translate(-50%, 0);
-  transition: transform 0.2s ease-in-out;
+  transition: transform var(--transition-2);
   border-radius: 2px;
 }
 
@@ -163,7 +163,7 @@
   height: 2px;
   background-color: var(--color-black-100);
   transform: translate(-50%, -50%);
-  transition: opacity 0.2s ease-in-out;
+  transition: opacity var(--transition-2);
   border-radius: 2px;
 }
 
@@ -175,7 +175,7 @@
   height: 2px;
   background-color: var(--color-black-100);
   transform: translate(-50%, 0);
-  transition: transform 0.2s ease-in-out;
+  transition: transform var(--transition-2);
   border-radius: 2px;
 }
 

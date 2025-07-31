@@ -10,18 +10,18 @@
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  transition: all 0.2s ease-in-out;
+  transition: all var(--transition-2);
 
   &::before {
     content: '';
     position: absolute;
     height: 1px;
     width: 100vw;
-    background-color: #d0d0d8;
+    background-color: var(--color-black-40);
     position: absolute;
     top: 50%;
     right: 100%;
-    transition: all 0.2s ease-in-out;
+    transition: all var(--transition-2);
   }
 
   &::after {
@@ -29,23 +29,23 @@
     position: absolute;
     height: 1px;
     width: 100vw;
-    background-color: #d0d0d8;
+    background-color: var(--color-black-40);
     position: absolute;
     top: 50%;
     left: 100%;
-    transition: all 0.2s ease-in-out;
+    transition: all var(--transition-2);
   }
 }
 
 .question--current {
   &::before,
   &::after {
-    background-color: #ff8b37;
+    background-color: var(--color-orange-100);
   }
 }
 
 .question--previous {
-  color: #d0d0d8;
+  color: var(--color-black-40);
 }
 
 .icon-wrapper {
@@ -53,11 +53,11 @@
 }
 
 .icon-path {
-  transition: all 0.2s ease-in-out;
+  transition: all var(--transition-2);
 }
 
 .icon-path--active {
-  stroke: #ff8b37;
+  stroke: var(--color-orange-100);
 }
 
 .text {
