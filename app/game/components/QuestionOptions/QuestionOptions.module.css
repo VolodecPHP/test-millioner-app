@@ -80,21 +80,21 @@
 .option-content--selected {
   &::before,
   &::after {
-    background-color: var(--color-orange-100);
+    background-color: var(--color-orange-100) !important;
   }
 }
 
 .option-content--correct {
   &::before,
   &::after {
-    background-color: var(--color-green-100);
+    background-color: var(--color-green-100) !important;
   }
 }
 
 .option-content--incorrect {
   &::before,
   &::after {
-    background-color: var(--color-red-100);
+    background-color: var(--color-red-100) !important;
   }
 }
 
@@ -125,16 +125,16 @@
 }
 
 .icon-path--selected {
-  fill: var(--color-orange-5);
-  stroke: var(--color-orange-100);
+  fill: var(--color-orange-5) !important;
+  stroke: var(--color-orange-100) !important;
 }
 
 .icon-path--correct {
-  fill: var(--color-green-5);
-  stroke: var(--color-green-100);
+  fill: var(--color-green-5) !important;
+  stroke: var(--color-green-100) !important;
 }
 
 .icon-path--incorrect {
-  fill: var(--color-red-5);
-  stroke: var(--color-red-100);
+  fill: var(--color-red-5) !important;
+  stroke: var(--color-red-100) !important;
 }
