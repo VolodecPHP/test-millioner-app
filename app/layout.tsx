@@ -12,14 +12,14 @@ export const metadata: Metadata = {
   description:
     'Test your knowledge at free online game based on the famous TV quiz show , give the correct answers, and win some amazing prizes!',
   openGraph: {
-    title: 'My Page Title',
-    description: 'Page description here',
+    title: 'I ❤️ Headway',
+    description: 'Nothing else to add',
     images: [
       {
-        url: '/start-desktop-v1.png',
+        url: '/easter-egg.png',
         width: 1200,
         height: 630,
-        alt: 'My Thumbnail',
+        alt: 'Check image',
       },
     ],
   },
