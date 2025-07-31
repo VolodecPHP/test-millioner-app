@@ -1,4 +1,4 @@
-import { Link } from '../Link/Link';
+import Link from 'next/link';
 import styles from './NotFound.module.css';
 
 export const NotFound = () => {

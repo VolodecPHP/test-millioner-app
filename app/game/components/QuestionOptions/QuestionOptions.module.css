@@ -23,9 +23,10 @@
   aspect-ratio: 288 / 56;
   cursor: pointer;
   border: none;
-  outline: none;
+  border-radius: 12px;
   background-color: transparent;
   width: 100%;
+  transition: all 0.2s ease-in-out;
 
   @media (max-width: 768px) {
     max-height: 60px;
@@ -41,6 +42,7 @@
     top: 50%;
     right: calc(100% - 1px);
     transform: translateY(-50%);
+    transition: all 0.2s ease-in-out;
   }
 
   &::after {
@@ -53,7 +55,17 @@
     top: 50%;
     left: calc(100% - 1px);
     transform: translateY(-50%);
+    transition: all 0.2s ease-in-out;
   }
+}
+
+.option:hover .option-content::before,
+.option:hover .option-content::after {
+  background-color: var(--color-orange-100);
+}
+
+.option:hover .icon-path {
+  stroke: var(--color-orange-100);
 }
 
 .option-content--selected {
@@ -96,6 +108,10 @@
   width: 100%;
   left: 0;
   top: 0;
+}
+
+.icon-path {
+  transition: all 0.2s ease-in-out;
 }
 
 .icon-path--selected {

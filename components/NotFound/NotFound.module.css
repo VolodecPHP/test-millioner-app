@@ -27,4 +27,6 @@
 
 .link {
   margin: 0 auto;
+  font-weight: 600;
+  font-size: var(--text-size-question);
 }
