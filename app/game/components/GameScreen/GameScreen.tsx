@@ -4,6 +4,7 @@ import { QuestionOptions } from '../QuestionOptions/QuestionOptions';
 import { Question } from '@/types';
 import { useState } from 'react';
 import { MobileHeader } from '../MobileHeader/MobileHeader';
+import { AnimatePresence, motion } from 'framer-motion';
 import cn from 'classnames';
 
 interface GameScreenProps {
@@ -45,7 +46,14 @@ export const GameScreen = ({
       />
       <div className={classNames.round}>
         <div className={classNames.roundContainer}>
-          <p className={classNames.title}>{currentQuestion.text}</p>
+          <p className={classNames.title}>
+            <AnimatePresence mode='wait'>
+              <motion.span key={currentQuestion.id} exit={{ opacity: 0 }}>
+                {currentQuestion.text}
+              </motion.span>
+            </AnimatePresence>
+          </p>
+
           <QuestionOptions
             currentQuestion={currentQuestion}
             isAnswersRevealed={isAnswersRevealed}
